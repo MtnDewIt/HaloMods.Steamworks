@@ -15,6 +15,9 @@ jobs:
 
     runs-on: windows-2025-vs2026
 
+    outputs:
+      release_version: ${{ steps.determine_version.outputs.version }}
+
     strategy:
       matrix:
         include:
