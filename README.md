@@ -1,6 +1,6 @@
 # Facepunch.Steamworks
 
-[Another fucking c# Steamworks implementation](https://wiki.facepunch.com/steamworks/)
+[Yet another C# Steamworks implementation](https://wiki.facepunch.com/steamworks/)
 
 ![Build All](https://github.com/Facepunch/Facepunch.Steamworks/workflows/Build%20All/badge.svg)
 
@@ -18,7 +18,6 @@
 | Single C# dll (no native requirements apart from Steam) | ✔ |
 | Open Source | ✔ |
 | MIT license | ✔ |
-| Any 32bit OS | ✔  |
 
 ## Why
 
