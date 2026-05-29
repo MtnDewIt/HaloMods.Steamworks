@@ -20,7 +20,7 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\Facepunch.Steamworks\Facepunch.Steamworks.csproj" />
+    <ProjectReference Include="..\HaloMods.Steamworks\HaloMods.Steamworks.csproj" />
   </ItemGroup>
 
   <ItemGroup>

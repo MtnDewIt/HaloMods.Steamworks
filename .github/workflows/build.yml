@@ -43,17 +43,17 @@ jobs:
         uses: NuGet/setup-nuget@v1.0.5
 
       - name: Restore and Build solution
-        run: msbuild Facepunch.Steamworks.slnx -t:restore -t:rebuild -property:Platform=${{ matrix.platform }} -property:Configuration=Release
+        run: msbuild HaloMods.Steamworks.slnx -t:restore -t:rebuild -property:Platform=${{ matrix.platform }} -property:Configuration=Release
 
       - name: Cleanse Build
         if: github.event_name != 'pull_request'
         run: |
-          Get-ChildItem -Path ./Facepunch.Steamworks/bin/${{ matrix.platform }}/Release/ -Recurse -Include *.pdb,*.lib | Remove-Item -Force
+          Get-ChildItem -Path ./HaloMods.Steamworks/bin/${{ matrix.platform }}/Release/ -Recurse -Include *.pdb,*.lib | Remove-Item -Force
 
       - name: Zip Payload
         if: github.event_name != 'pull_request'
         run: |
-          7z a HaloMods.Steamworks_${{ matrix.platform_name }}.7z ./Facepunch.Steamworks/bin/${{ matrix.platform }}/Release/*
+          7z a HaloMods.Steamworks_${{ matrix.platform_name }}.7z ./HaloMods.Steamworks/bin/${{ matrix.platform }}/Release/*
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
